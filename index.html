@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .example {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 10px 15px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            max-width: 500px;
+            height: auto;
+        }
+
+       
+    </style>
+    <link rel="stylesheet" href="src/css/myalert.css">
+</head>
+
+<body>
+
+
+    <div class="example c_alert">
+        <div class="content">
+            <h1>
+                Customs Alerts
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum officiis ut vero nemo praesentium
+                sapiente
+                libero iure. Quasi repudiandae illum aut dolor ea numquam expedita voluptate, esse deserunt officia
+                praesentium.
+            </p>
+            <p>
+                <button type="button" id="c__alert" class="button--alert">click</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="./src/js/myAlert.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const launch = document.querySelector("#c__alert")
+           
+            const alert = new MyAlert()
+            alert.type_a="success"
+            alert.btn_text="Cerrar"
+            launch.addEventListener("click", () => {
+                alert.create__alert()
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>
